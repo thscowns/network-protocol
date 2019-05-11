@@ -83,7 +83,7 @@ public class ConnectResource extends CoapResource {
 			
 			
 			//2-4. Requested value Save into Data Structure
-			DeviceInfo dev_info = new DeviceInfo(id, state, mode,power);
+			DeviceInfo dev_info = new DeviceInfo(id, state, mode,"100");
 			Global.device_list.put(id, dev_info);
 			
 

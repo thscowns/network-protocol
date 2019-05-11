@@ -35,6 +35,7 @@ public class Connect {
 		json.put("DeviceID", Global.SYSTEMID);
 		json.put("State", "off");
 		json.put("Mode", Global.Mode);
+		json.put("Power", "0");
 		
 		
 		//1-4. JSON값 String으로 변환하여 Server에게 PUT으로 전송 및 Response값 로그 출력

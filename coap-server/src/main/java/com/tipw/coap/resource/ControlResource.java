@@ -67,6 +67,7 @@ public class ControlResource extends CoapResource {
 				if (device.getIsEvent() == true) {
 				
 					json.put("Control", device.getEvent());
+					json.put("Power", device.getPower());
 				} else {
 					json.put("Control", "NONE");
 					

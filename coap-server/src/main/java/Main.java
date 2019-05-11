@@ -46,6 +46,7 @@ public class Main {
 			
 			// 2-2. Get Event State
 			String state = null;
+			String power = "0";
 			while (true) {
 				System.out.println("User Input OFF:0 ON:1 :");
 				int input = scan.nextInt();
@@ -53,7 +54,17 @@ public class Main {
 				if (input == 0) {
 					state = "OFF";
 				} else if (input == 1) {
-					state = "ON";
+					System.out.println("User Input power(0~100) : ");
+					int i = scan.nextInt();
+					if (i >= 0 && i <= 100) {
+						power = String.valueOf(i);
+						state = "ON";
+					}
+					else{
+						System.out.println("range over");
+						continue;
+					}
+
 				} else {
 					System.out.println("Wrong");
 					continue;
@@ -62,6 +73,7 @@ public class Main {
 			}
 			
 			// 2-3. Set Device Event
+			device.setPower(power);
 			device.ControlEvent(state);
 		}
 		
